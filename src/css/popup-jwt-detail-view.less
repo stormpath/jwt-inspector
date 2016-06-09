@@ -1,0 +1,79 @@
+#popup-jwt-detail-view {
+    font-size: 11px;
+
+    .top {
+        padding: 5px;
+
+        a, a:hover, a:link {
+            color: #101010;
+            text-decoration: none;
+        }
+    }
+
+    .bottom {
+        .jwt {
+            color: #5a5a5a;
+            border-top: 1px solid #dedede;
+
+            .section {
+                border-bottom: 1px solid #dedede;
+                font-size: 11px;
+                padding: 10px;
+
+                .header {
+                    font-weight: 600;
+                    cursor: pointer;
+
+                    .fa {
+                        position: relative;
+                        top: -0px;
+                        margin-right: 2px;
+                    }
+
+                    .copy {
+                        margin-left: 5px;
+                        font-weight: normal;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: #222222;
+                        }
+                    }
+                }
+
+                .body {
+                    padding-top: 5px;
+                    word-break: break-all;
+                    text-overflow: ellipsis;
+                    font-family: "Source Code Pro", monospace;
+                }
+
+                .body.plain {
+                    white-space: normal;
+                }
+
+                .body.json {
+                    white-space: pre;
+                    .token {
+                        &.object_key {
+                            color: #ca0000;
+                        }
+                    }
+                }
+            }
+
+            .section:first-child {
+                margin-top: 0px;
+            }
+
+            .section:last-child {
+                border-bottom: 0px;
+            }
+        }
+
+        .message {
+            padding: 10px;
+            font-size: 16px;
+        }
+    }
+}

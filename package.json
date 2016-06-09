@@ -1,0 +1,47 @@
+{
+  "version": "0.0.1",
+  "name": "jwt-inspector",
+  "homepage": "https://github.com/stormpath/jwt-inspector/",
+  "author": "Stormpath, 2016",
+  "license": "LicenseRef-LICENSE",
+  "scripts": {
+    "build": "rm -rf ./build/ && mkdir ./build/ && cp -r ./src/* ./build && rm -rf ./build/js/ ./build/css/ && webpack && npm run pack",
+    "dev": "rm -rf ./build/ && mkdir ./build/ && cp -r ./src/* ./build && rm -rf ./build/js/ ./build/css/ && webpack --watch",
+    "pack": "zip -r ./build/jwt-inspector.zip . -x *.git* *.DS_Store* .* webpack.config.js package.json README.md \"node_modules/*\" \"test/*\" \"src/*\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stormpath/jwt-inspector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stormpath/jwt-inspector/issues"
+  },
+  "dependencies": {
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-runtime": "^6.3.19",
+    "es6-promise": "^3.1.2",
+    "file-loader": "^0.8.5",
+    "json-loader": "^0.5.4",
+    "njwt": "^0.3.0",
+    "react": "^15.0.1",
+    "react-contenteditable": "^1.1.0",
+    "react-dom": "^15.0.1",
+    "react-textarea-autosize": "^4.0.1",
+    "webpack": "^1.12.13",
+    "webpack-dev-middleware": "^1.5.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "image-webpack-loader": "^1.8.0",
+    "less": "^2.6.1",
+    "less-cli": "^1.0.0",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1"
+  }
+}

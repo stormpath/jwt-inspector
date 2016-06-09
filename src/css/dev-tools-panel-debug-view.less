@@ -1,0 +1,136 @@
+#dev-tools-panel-debug-view {
+    position: relative;
+    font-size: 11px;
+    top: 27px;
+
+    .content {
+        display: flex;
+    }
+
+    .top {
+        height: 27px;
+        color: #5a5a5a;
+        font-weight: 400;
+        line-height: 13px;
+        .left, .right {
+            padding: 7px;
+            background-color: #f3f3f3;
+            border-bottom: 1px solid #dedede;
+        }
+    }
+
+    .left, .right {
+        flex: 50%;
+    }
+
+    .left {
+        border-right: 1px solid #dedede;
+    }
+
+    .bottom {
+        .left {
+            .jwt-editor {
+                padding: 10px;
+                height: 100%;
+                border: 0px;
+                margin: 0px;
+                outline: 0px;
+                word-break: break-all;
+
+                font-family: "Source Code Pro", monospace;
+                word-wrap: break-word;
+                font-size: 12px;
+
+                .separator {
+                }
+
+                .unknown {
+                    background-color: red;
+                    color: white;
+                }
+
+                .header {
+                    color: #9b4500;
+                }
+
+                .payload {
+                    color: #890193;
+                }
+
+                .signature {
+                    color: #ca0000;
+                }
+            }
+        }
+
+        .right {
+            .jwt {
+                color: #5a5a5a;
+
+                .section {
+                    border-bottom: 1px solid #dedede;
+                    font-size: 11px;
+                    padding: 10px;
+
+                    .header {
+                        font-weight: 600;
+                        cursor: pointer;
+
+                        .fa {
+                            position: relative;
+                            top: -0px;
+                            margin-right: 2px;
+                        }
+
+                        .copy {
+                            margin-left: 5px;
+                            font-weight: normal;
+
+                            &:hover {
+                                cursor: pointer;
+                                color: #222222;
+                            }
+                        }
+                    }
+
+                    .body {
+                        padding-top: 5px;
+                        word-break: break-all;
+                        text-overflow: ellipsis;
+                        font-family: "Source Code Pro", monospace;
+                    }
+
+                    .body.plain {
+                        white-space: normal;
+                    }
+
+                    .body.json {
+                        white-space: pre;
+                        .token {
+                            &.object_key {
+                                color: #ca0000;
+                            }
+                        }
+                    }
+                }
+
+                .section:first-child {
+                    margin-top: 0px;
+                }
+
+                .section:last-child {
+                    border-bottom: 0px;
+                }
+            }
+
+            .message {
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .no-jwt.message {
+                color: #c0c0c0;
+            }
+        }
+    }
+}

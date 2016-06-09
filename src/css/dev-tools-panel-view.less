@@ -1,0 +1,255 @@
+#dev-tools-panel-view {
+    .menu {
+        position: fixed;
+        z-index: 100000;
+        top: 0px;
+        height: 26px;
+        width: 100%;
+        background-color: #fff;
+        border-bottom: 1px solid #dedede;
+        line-height: 14px;
+        .badge {
+            line-height: 9px;
+            display: inline-block;
+            background: #979797;
+            color: white;
+            border-radius: 11px;
+            text-align: center;
+            font-size: 8px;
+            margin-left: 3px;
+            padding: 1px 4px;
+            margin-top: 1px;
+            vertical-align: top;
+        }
+    }
+
+    .icon {
+        margin-right: 3px;
+    }
+
+    .divider {
+        position: relative;
+        display: inline-block;
+        background-color: #ccc;
+        width: 1px;
+        top: 3px;
+        height: 13px;
+        margin-left: 7px;
+        margin-right: 6px;
+    }
+
+    .menu, .sub-menu {
+        -webkit-user-select: none;
+    }
+
+    table {
+        width: 100%;
+        font-size: 11px;
+
+        th, td {
+            font-weight: 400;
+            padding: 7px 10px;
+            padding-bottom: 6px;
+            height: 26px;
+        }
+
+        thead {
+            -webkit-user-select: none;
+
+            tr, th {
+                width: 100px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            th {
+                border: 1px solid #dadada;
+                border-top: 0px;
+                text-align: left;
+            }
+
+            th:first-child {
+                border-left: 0px;
+            }
+
+            th:last-child {
+                border-right: 0px;
+            }
+        }
+
+        tbody {
+            tr:nth-child(odd) {
+                background-color: #f5f5f5;
+            }
+
+            tr.selected {
+                background-color: #e5e5e5;
+            }
+
+            tr:hover {
+                cursor: pointer;
+                background-color: #dfdfdf;
+            }
+
+            tr td {
+              max-width: 1200px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            tr.no-data {
+                cursor: inherit;
+                pointer-events: none;
+                background-color: inherit;
+                color: #c0c0c0;
+            }
+        }
+    }
+
+    .sub-menu {
+        position: fixed;
+        z-index: 100000;
+        top: 27px;
+        width: 100%;
+
+        color: #5a5a5a;
+        font-size: 11px;
+
+        margin: 0px;
+        padding: 2px;
+
+        background-color: #f3f3f3;
+        border-bottom: 1px solid #dedede;
+
+        height: 22px;
+
+        .item {
+            line-height: 11px;
+            margin-left: 5px;
+            display: inline-block;
+
+            &:first-child {
+                margin-left: 5px;
+            }
+
+            &.query {
+                margin: 0px;
+                padding: 0px;
+                height: 26px;
+
+                input {
+                    background-color: #f3f3f4;
+                    margin: 0px;
+                    margin-left: 5px;
+                    padding: 4px;
+                    width: 200px;
+                    border: 0px;
+                }
+
+                input:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .split-pane {
+        position: relative;
+        top: 54px;
+        width: 100%;
+        font-size: 11px;
+
+        .left {
+            overflow: hidden;
+        }
+
+        .right {
+            .sub-menu {
+                height: 22px;
+
+                .close-button {
+                    margin-left: 10px;
+                    position: relative;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: #a0a0a0;
+                    }
+                }
+
+                .item {
+                    margin: 0px;
+                    padding: 5px;
+                    margin: 0px;
+                    color: #5a5a5a;
+                    text-align: left;
+                }
+            }
+
+            .content {
+                overflow: scroll;
+
+                .jwt {
+                    color: #5a5a5a;
+
+                    .section {
+                        border-bottom: 1px solid #dedede;
+                        font-size: 11px;
+                        padding: 10px;
+
+                        .header {
+                            font-weight: 600;
+                            cursor: pointer;
+
+                            .fa {
+                                position: relative;
+                                top: -0px;
+                                margin-right: 2px;
+                            }
+
+                            .copy {
+                                margin-left: 5px;
+                                font-weight: normal;
+
+                                &:hover {
+                                    cursor: pointer;
+                                    color: #222222;
+                                }
+                            }
+                        }
+
+                        .body {
+                            padding-top: 5px;
+                            word-break: break-all;
+                            text-overflow: ellipsis;
+                            font-family: "Source Code Pro", monospace;
+                        }
+
+                        .body.plain {
+                            white-space: normal;
+                        }
+
+                        .body.json {
+                            white-space: pre;
+                            .token {
+                                &.object_key {
+                                    color: #ca0000;
+                                }
+                            }
+                        }
+                    }
+
+                    .section:first-child {
+                        margin-top: 0px;
+                    }
+
+                    .section:last-child {
+                        border-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

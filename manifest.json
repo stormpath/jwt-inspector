@@ -1,0 +1,44 @@
+{
+    "manifest_version": 2,
+    "version": "1.0.0",
+    "minimum_chrome_version": "39",
+    "name": "JWT Inspector - Inspect JWTs In-Browser",
+    "short_name":"JWTInspector",
+    "description": "JWT Inspector lets you inspect JSON Web Tokens in requests, cookies and local storage.",
+    "icons": {
+        "16": "assets/images/icon-16.png",
+        "48": "assets/images/icon-48.png",
+        "128": "assets/images/icon-128.png"
+    },
+    "background": {
+        "page": "build/html/Background.html"
+    },
+    "browser_action": {
+        "default_icon": "assets/images/icon-128.png",
+        "default_popup": "build/html/Popup.html"
+    },
+    "devtools_page": "build/html/DevTools.html",
+    "content_scripts": [{
+        "all_frames": true,
+        "run_at": "document_start",
+        "matches": ["*://*/*"],
+        "js": ["assets/js/content-script.js"]
+    }],
+    "web_accessible_resources":[
+        "/assets/js/console-jwt.js"
+    ],
+    "permissions": [
+        "<all_urls>",
+        "activeTab",
+        "clipboardRead",
+        "contextMenus",
+        "cookies",
+        "http://*/*",
+        "https://*/*",
+        "storage",
+        "tabs",
+        "unlimitedStorage",
+        "webNavigation",
+        "webRequest"
+    ]
+}
