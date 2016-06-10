@@ -4,6 +4,8 @@ JWT Inspector
 JWT Inspector is a Chrome extension that lets you inspect JSON Web Tokens in requests, cookies and local storage.
 Also debug any JWT directly from the console or in the built-in UI.
 
+http://www.jwtinspector.io/
+
 ## How to build
 
 Run the command below, then upload the file `./build/jwt-inspector.zip` to the Chrome Web Store.
