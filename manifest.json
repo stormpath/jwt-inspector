@@ -1,10 +1,11 @@
 {
     "manifest_version": 2,
-    "version": "1.0.0",
+    "version": "1.0.1",
     "minimum_chrome_version": "39",
-    "name": "JWT Inspector - Inspect JWTs In-Browser",
+    "default_locale": "en",
+    "name": "__MSG_appName__",
     "short_name":"JWTInspector",
-    "description": "JWT Inspector lets you inspect JSON Web Tokens in requests, cookies and local storage.",
+    "description": "__MSG_appDesc__",
     "icons": {
         "16": "assets/images/icon-16.png",
         "48": "assets/images/icon-48.png",

@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "जेडब्ल्यूटी इंस्पेक्टर - में ब्राउज़र JWTs का निरीक्षण",
+    "description": "The title of the application, displayed in the web store."
+  },
+  "appDesc": {
+    "message": "जेडब्ल्यूटी इंस्पेक्टर आप अनुरोधों, कुकीज और स्थानीय भंडारण में JSON वेब टोकन का निरीक्षण कर देता है।",
+    "description":"The description of the application, displayed in the web store."
+  }
+}

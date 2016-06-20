@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "JWTインスペクタは - ブラウザ内JWTsを点検します",
+    "description": "The title of the application, displayed in the web store."
+  },
+  "appDesc": {
+    "message": "JWTインスペクタを使用すると、リクエスト、クッキーやローカルストレージにJSONのWebトークンを検査することができます。",
+    "description":"The description of the application, displayed in the web store."
+  }
+}

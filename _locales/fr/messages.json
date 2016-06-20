@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Inspecteur JWT - Inspecter JWTs dans le navigateur",
+    "description": "The title of the application, displayed in the web store."
+  },
+  "appDesc": {
+    "message": "Inspecteur JWT vous permet d'inspecter JSON Web Tokens dans les demandes, les cookies et le stockage local.",
+    "description":"The description of the application, displayed in the web store."
+  }
+}

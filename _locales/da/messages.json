@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "JWT Inspector - Undersøg JWTs In-browser",
+    "description": "The title of the application, displayed in the web store."
+  },
+  "appDesc": {
+    "message": "JWT Inspector kan du inspicere JSON Web poletter i anmodninger, cookies og lokal lagring.",
+    "description": "The description of the application, displayed in the web store."
+  }
+}
