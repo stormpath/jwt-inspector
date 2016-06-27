@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "version": "1.0.1",
+    "version": "1.0.2",
     "minimum_chrome_version": "39",
     "default_locale": "en",
     "name": "__MSG_appName__",

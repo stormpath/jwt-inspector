@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "JWT Inspector - Inspect JWTs In-Browser",
+    "message": "JWT Analyzer & Inspector",
     "description": "The title of the application, displayed in the web store."
   },
   "appDesc": {
