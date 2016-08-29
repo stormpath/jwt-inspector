@@ -14,6 +14,11 @@ export default class RequestListener extends EventEmitter {
   onBeforeRequest(request) {
     let url = request.url;
 
+    // Discard everything except AJAX HTTP requests.
+    if (request.type !== 'xmlhttprequest') {
+      return;
+    }
+
     // Skip any chrome requests... I.e. chrome:// or chrome-extension://...
     if (url.indexOf('chrome') === 0) {
       return;
