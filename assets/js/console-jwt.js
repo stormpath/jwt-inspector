@@ -16,7 +16,10 @@
       return false;
     }
 
-    var [header, body, signature] = value.split('.');
+    var tokens = value.split('.');
+    var header = tokens[0];
+    var body = tokens[1];
+    var signature = tokens[2];
 
     try {
       return new JWT(
